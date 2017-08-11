@@ -1,0 +1,101 @@
+#contact {
+  width: 95%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+#online_contact_form {
+  display: block;
+  margin: 0 auto;
+}
+
+fieldset {
+  border-radius: 10%;
+  border-style:inset;
+  border-width: medium;
+  padding: 1%;
+}
+.rows h2 {
+  text-align: center;
+}
+select {
+  float: right;
+  width: 40.5%;
+  padding: 0.7%;
+  font-size: 0.8em;
+  margin-bottom: 0.2%;
+}
+input {
+  width: 40%;
+  height: auto;
+  float: right;
+  margin-bottom: 1%;
+  font-size: 0.8em;
+}
+textarea {
+  float:right;
+  width: 70%;
+  height: 20em;
+  margin: 3%;
+  font-size: 0.8em;
+}
+#checkbox {
+  font-size: 0.5em;
+  color: blue;
+  display: inline;
+  margin: 2%;
+}
+/*Contact confirm styling for form feedback*/
+ #alternative_contact_details h3,
+ #alternative_contact_details h4 {
+   text-align: center;
+ }
+ .contact-vars {
+   float:right;
+ }
+ .back_button {
+   margin: 0 auto;
+   padding: 3%;
+   border-radius: 6%;
+   font-size: 1em;
+   font-weight: bold;
+   float:none;
+   width: 95%;
+ }
+/*Alerts styling for the online form*/
+.alert {
+  background: #f4ce42;
+  padding: 1%;
+  font-size: 0.7em;
+  color: red;
+  font-weight: bold;
+  display: inline-block;
+  animation:  2s alertAnim forwards;
+}
+@@keyframes alertAnim {
+  from {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to {
+    opacity: 1;
+    transform:translateY(0);
+  }
+}
+/*Responsive Media Query Styling*/
+@media only screen and (max-width:768px) {
+ #checkbox a label{
+   font-size: 80%;
+   position: relative;
+ }
+ .alert {
+   font-size: 60%;
+ }
+ .back_button {
+   padding: 1%;
+   border-radius: 6%;
+   font-size: 70%;
+   font-weight: bold;
+   float:none;
+   margin: 1% auto;
+ }
+}

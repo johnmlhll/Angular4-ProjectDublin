@@ -1,0 +1,34 @@
+/*general text styling*/
+p, ul li {
+  line-height: 1.5em;
+  font-size: 1.1em;
+  list-style-type: none;
+}
+/*image styling*/
+
+.trivia_images img {
+  width: 35%;
+  border-radius: 40%;
+  border-style: inset;
+  margin: 1% auto;
+  float: right;
+}
+#dublin_images {
+  box-sizing: border-box;
+  display: inline;
+  margin: 0 10% auto;
+}
+
+#dublin_images img {
+  border-radius: 20%;
+  width: 20%;
+  border-style: inset;
+}
+
+/*Responsive Media Query Styling*/
+@media only screen and (max-width:768px) {
+  #dublin_images {
+    display: block;
+    position: relative;
+  }
+}

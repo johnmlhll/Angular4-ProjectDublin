@@ -1,0 +1,43 @@
+/*About Div Level styling*/
+.about {
+  position: relative;
+  border-radius: 5%;
+  width: 100%;
+  margin-bottom: 0.5%;
+}
+p {
+     line-height: 1.5em;
+     font-size: 1.1em;
+}
+ul li {
+     line-height: 1.5em;
+     list-style-type: none;
+     font-weight: bold;
+     font-size: 1.1em;
+}
+/*image styling*/
+#imgJohnInsideDBS  {
+  width: 35%;
+  box-sizing: border-box;
+}
+#imgJohnInsideDBS img {
+  float: right;
+  border-radius: 45%;
+  margin: 2%;
+  box-sizing: border-box;
+  width: 35%;
+}
+#imgSpringBoardAccept img {
+  float: left;
+  border-radius: 30%;
+  margin: 2%;
+  box-sizing: border-box;
+  width: 35%;
+}
+
+@media only screen and (max-width:560px) {
+  p {
+       margin: 1% auto;
+       font-size: 90%;
+  }
+}

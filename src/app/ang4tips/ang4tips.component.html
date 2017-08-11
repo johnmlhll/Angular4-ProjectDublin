@@ -1,0 +1,89 @@
+<div id="overall_tips">
+  <h1>Angular 4 Tips >>></h1>
+  <div id="ang4tip_intro">
+    <h3>Introduction</h3>
+    <a id="workstation"><img [src]="imgJohnMulWorkStation"/></a>
+    <p>
+      Here you will find use tips and useful videos on getting started with Angular 4 and what to look out for
+      when starting into your new Angular 4 application. For instance, as you cannot use reset.css to ensure
+      your css styling is uniform accross as many browsers as possible, a simple script selector to a javascript
+      url will save you hours trying to <strong><i>get your styling right accross all browsers!</i></strong> Hope you
+      get some value from the below tips and tutorials. Just click on them and see if anything cool happens
+      make your reading experience more pleasant!
+    </p>
+  <div id="ang4tips" [@viewAngularTip]='state' (click)="animateMe()">
+    <div id="setup">
+      <h3>Getting Started with Angular 4</h3>
+      <dl>
+        <dt>Installing Angular 4 using the @angularcli, Nodejs and NPM package manager</dt>
+          <dd>Check for your version of npm package manager with 'npm --version' Note: version 3.10 or above is good!</dd>
+          <dd>Check for your version of nodejs with 'node --version' Note: version 6.8 or above is good!</dd>
+          <dd>
+            If you need to install them, see more in set up at the
+            <a class="people_links" href="https://docs.npmjs.com/getting-started/installing-node">NPM Tutorial</a>.
+            </dd>
+          <dd>Install angularcli with 'npm install -g @angular/cli'</dd>
+          <dd>Make a project directory with 'mkdir your_dir_name' and enter it with 'cd your_dir_name'</dd>
+        <dt>Creating your first Angular Project</dt>
+          <dd>In your Angular 4 folder, create a new project with 'ng new your_project_name'</dd>
+          <dd>Change into your new project with 'cd your_new_project_name'</dd>
+          <dd>Check your version of Angular on the project with 'ng -v' Note: if version 4.0+ you have a Angular 4 project</dd>
+          <dd>Start your server running locally on 'localhost:4200' with 'ng serve' (Angular 2 equivalent is 'npm start')</dd>
+        <dt>Issues with the angular installation?</dt>
+          <dd>
+            ng -v Unable to find "@angular/cli" in devDependencies.
+            Please take the following steps to avoid issues:
+            "npm install --save-dev @angular/cli@latest"
+          </dd>
+        <dt>Installing a sub component in your new Angular 4 Project</dt>
+          <dd>CTRL C out of your project (but stay in the folder on the command line interface!)
+            to install the component with 'ng g component my-new-component'</dd>
+          <dd>
+            You should see an update from the console like this: <br>
+            create src/app/my-new-component/my-new-component.component.css <br>
+            create src/app/my-new-component/my-new-component.component.html <br>
+            create src/app/my-new-component/my-new-component.component.spec.ts <br>
+            create src/app/my-new-component/my-new-component.component.ts <br>
+            update src/app/app.module.ts <br>
+          </dd>
+          <dd>When you do restart your applicaiton server in the folder with 'ng serve'</dd>
+      </dl>
+    </div>
+    <div id="navigation">
+      <h3>Navigation and Routing</h3>
+      <p>
+        Great Tutorial on Setting up Nagivation and associated Routing in Angular 4 by
+        <a class = "people_links" target="_blank" href="https://www.youtube.com/channel/UCIKbbV7ae7LAWa8cGnvjSPA">Awais Mirza</a>.
+      </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/L6ipgij-AUw" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+    <div id="polyfill">
+      <h3>Uniform Styling - All Major Browsers</h3>
+      <dl>
+        <dt>Ensuring web animations (powerful Angular 4 feature) work in more then Chrome and Firefox browsers<dt>
+        <dd>
+          You need to install web-animations module and active the polyfill import for it!
+          Go to your polyfills.ts file in your main/root folder <br> and check if its commented out or active.
+          This is what an active web-animations module looks like:
+        </dd>
+        <dd><img [src]="imgWebAnimationsPolyfill"></dd>
+        <dd>
+          If the import is commented out with '//', remove the '//', CTRL C out of the application
+          but not the folder and install web animations with <br> 'npm install --save web-animiations-js'
+        </dd>
+        <dd>
+          Restart the server with 'ng serve' and you will notice your animations now work on browsers
+          like Safari (V10+).
+        </dd>
+        <dt>Ensuring your styling is uniform accross all browsers (Angular version of 'reset.css' approach)</dt>
+        <dd>To to your main/root folder and open 'index.html'</dd>
+        <dd>
+          When there in the 'head' section insert the following script code using the script selector and
+          src="node_modules/core-js/client/shim.min.js"
+        </dd>
+        <dd>Now you will find all main and sub components will have the same styling across all major browsers</dd>
+      </dl>
+    </div>
+  </div>
+</div>

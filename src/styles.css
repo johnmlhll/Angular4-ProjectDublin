@@ -1,1 +1,176 @@
-/* You can add global styles to this file, and also import other style files */
+/*Import custom font for alerts*/
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700');
+/*Styling Main Component - Overall Content*/
+body {
+  background: #f4ce42;
+  margin: auto 1% 1%;
+  position: relative;
+}
+main {
+  position: relative;
+  box-sizing: border-box;
+}
+h1 {
+  position: relative;
+  text-align: center;
+  width: 100%
+}
+app-root {
+  margin: -1% auto;
+}
+@media only screen and (max-width:768px) {
+  app-root {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+span {
+  text-decoration: underline;
+  color: grey;
+}
+/*Styling Main Component - Header*/
+#logo {
+  display: inline;
+  position: relative;
+}
+#logo h1 {
+  margin: -4% 3% auto;
+  text-align: center;
+  width: 100%;
+}
+/*Styling Main Component - Footer*/
+footer {
+    font-size: 0.8em;
+    font-weight: normal;
+    text-align: center;
+    width: 100%;
+}
+
+footer h4 {
+  font-size: 1.2em;
+  display:inline-block;
+}
+hr {
+  width: 80%;
+}
+.footer_links {
+  float: left;
+}
+ .footer_links ul {
+   list-style-type: none;
+ }
+.urls {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.urls:hover {
+  color: green;
+  font-size: 1.4em;
+}
+.urls:visited {
+  color: red;
+  font-weight: normal;
+}
+.footer_contact_details {
+    display: block;
+    float: right;
+}
+.footer_contact_details ul {
+  list-style-type:none;
+}
+.footer_contact_details ul li {
+  font-size: 1.4em;
+  margin-bottom: 1%;
+}
+#copyright {
+  position: relative;
+}
+/*Titles/Body - Responsive Media Query Styling*/
+@media only screen and (max-width:768px) {
+  body {
+    box-sizing: border-box;
+    margin: 0.1% auto;
+  }
+  h1, h2 {
+    font-size: 155%;
+    width: 100%;
+  }
+  #logo {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+  }
+}
+/*Responsive styling for footer*/
+@media only screen and (max-width:768px) {
+  footer {
+    float:none;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    font-size: 80%;
+    text-align: center;
+  }
+  .footer_contact_details, .footer_links {
+      display: block;
+      float:none;
+      text-align: center;
+  }
+  h2, h3, h4, p {
+    font-size: 70%;
+  }
+}
+/*Multiple child components - specific styling*/
+h2, h3, h4, p {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.people_links {
+  color: #4da6ff;
+}
+.people_links:hover {
+  color: red;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.people_links:visited {
+  color: green;
+  text-decoration: none;
+}
+dt {
+  font-weight: bold;
+  margin: 0.5% auto;
+}
+iframe {
+  border-radius: 5%;
+  max-width: 100%;
+}
+.button a input {
+  display: block;
+  width: 30%;
+  padding: 0.8%;
+  font-size: 1em;
+  margin: 0 5% 1% 2%;
+  border-radius: 6%;
+  box-sizing: border-box;
+}
+/*Multiple Child Components - Responsive Media Query Styling*/
+@media only screen and (max-width:860px) {
+  .people_links {
+    font-size: 80%;
+  }
+  .button a input {
+    margin: 0 3% 5%;
+    float: right;
+    width: 30%;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    font-size: 40%;
+    font-weight: bold;
+    padding: 1%;
+    border-radius: 45%;
+  }
+}

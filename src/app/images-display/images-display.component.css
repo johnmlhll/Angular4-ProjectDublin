@@ -1,0 +1,50 @@
+/*Main image component*/
+h3 {
+  text-align: center;
+  font-family: fantasy, cursive;
+  font-size: 2.3em;
+}
+.images_display {
+  display: inline-block;
+  position: relative;
+  float: right;
+  margin-bottom: 1%;
+  padding-bottom: 1%;
+  border-left: solid;
+  box-sizing: border-box;
+}
+img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  padding: 1%;
+  border-radius: 40%;
+  border-spacing: 1%;
+}
+/*Responsive Styling for the component*/
+@media only screen and (max-width:1198px) {
+  .images_display {
+    border-style: none;
+    float: left;
+  }
+  .img {
+    display: block;
+    margin: 0 auto;
+    padding: 1%;
+    border-radius: 40%;
+    border-spacing: 1%;
+  }
+}
+@media only screen and (max-width:898px) {
+  .images_display {
+    border-style: none;
+    float: none;
+  }
+  .img {
+    display: block;
+    margin: 0 auto;
+    padding: 1%;
+    border-radius: 20%;
+    border-spacing: 1%;
+  }
+}

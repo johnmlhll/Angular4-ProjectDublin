@@ -1,0 +1,11 @@
+@media only screen and (max-width:1198px) {
+  app-images-display {
+    text-align: center;
+  }
+  app-video-display {
+    text-align: center;
+  }
+  app-feature-article {
+    text-align: center;
+  }
+}

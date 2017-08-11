@@ -1,0 +1,65 @@
+/*Styling Main Component - Header*/
+#main_header {
+  text-align: center;
+}
+/*Styling Main Component - NavBar*/
+.navbar {
+    list-style-type: none;
+    text-align: center;
+    background: #d88c22;
+    width: 95%;
+    padding: 2%;
+    border-radius: 13%;
+    border-style: outset;
+}
+
+.navbar li {
+      display: inline;
+      margin: 1% 1% 2% 2%;
+}
+.nav_link {
+  font-size: 2em;
+  text-decoration: none;
+  font-family: cursive, Arial;
+  color: #f4f9bd;
+  font-weight: bolder;
+}
+
+.nav_link:hover {
+  font-size: 2.3em;
+  color:#74f441;
+}
+
+router-outlet {
+  margin: -2% auto;
+}
+/*Responsive Media Query Styling*/
+@media only screen and (max-width:950px) {
+  .navbar li {
+        display: inline-block;
+        margin: 1% auto;
+        padding: 1%;
+        font-size: 80%
+  }
+}
+/*Resonsive styling for navbar*/
+@media only screen and (max-width:808px) {
+  .navbar {
+        /*color grading by webkit*/
+        background: -webkit-linear-gradient(#d88c22, #663300);
+        background: -o-linear-gradient(#d88c22, #663300);
+        background: -moz-linear-gradient(#d88c22, #663300);
+        background: linear-gradient(#d88c22, #663300);
+  }
+  .navbar li {
+        display: block;
+        padding: 0.05%;
+        font-size: 70%;
+        margin: 1% 2% auto;
+  }
+  .navbar li:hover {
+        display: block;
+        padding: 0;
+        font-size: 120%;
+  }
+}

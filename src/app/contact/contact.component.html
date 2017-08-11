@@ -1,0 +1,93 @@
+<div id="contact">
+  <h1>Contact Us</h1>
+  <p>
+    If you want to contact the Developer (i.e. "me"... ;-), then you can come to the right
+    place. You can fill out the online form or use the contact details below. Its reactive so check
+    out the validation and ease of us when using the contact form!
+  </p>
+  <div *ngIf="!firstName; else forminfo">
+    <fieldset>
+    <form id="online_contact_form" [formGroup]="rForm" (ngSubmit)=addPost(rForm.value)>
+      <div class="form-container">
+        <div class="rows">
+          <h2>Online Contact Form</h2>
+          <!--Contact Type (Enum)-->
+          <p>
+            <label>Contact Type:</label>
+            <select formControlName="selectEnum">
+              <option *ngFor="let key of keys" [value]="key">{{ contactType[key] }}</option>
+            </select>
+          </p>
+          <!--First Name-->
+          <p>
+            <label>First Name: <input type="text" formControlName="firstName" placeholder="Given/First Name here"></label>
+          </p>
+          <div class = "alert" *ngIf="!rForm.controls['firstName'].valid && rForm.controls['firstName'].touched">
+              {{ alertFirstName }}
+          </div>
+          <!--Last Name-->
+          <p>
+            <label>Last Name: <input type="text" formControlName="lastName" placeholder="Last/Family Name here"></label>
+          </p>
+          <div class = "alert" *ngIf="!rForm.controls['lastName'].valid && rForm.controls['lastName'].touched">
+              {{ alertLastName }}
+          </div>
+          <!--Email-->
+          <p>
+            <label>Email: <input type="text" formControlName="email" placeholder="e.g. john@example.com"></label>
+          </p>
+          <div class = "alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">
+            {{ alertEmail }}
+          </div>
+          <!--Contact Number-->
+          <p>
+            <label>Contact Number: <input type="text" formControlName="contactNumber" placeholder="e.g. 086 9999999"></label>
+          </p>
+          <div class = "alert" *ngIf="!rForm.controls['contactNumber'].valid && rForm.controls['contactNumber'].touched">
+              {{ alertContactNumber }}
+          </div>
+          <br>
+          <!--Comments-->
+          <label>Comments: <textarea formControlName="comment" placeholder="Input your Comments/Message here"></textarea></label>
+          <div class = "alert" *ngIf="!rForm.controls['comment'].valid && rForm.controls['comment'].touched">
+              {{ alertComment }}
+          </div>
+          <!--Checkbox for Min 3 Characters-->
+          <fieldset id="checkbox">
+            <a><label for="validate">Turn 3 Character Field Minimum On</label></a>
+            <a><input type="checkbox" name="validate" formControlName="validate" value="1"></a>
+          </fieldset>
+          <div class="button">
+            <a><input type="submit" value="Submit Contact Form" [disabled]="!rForm.valid"></a>
+            <a><input type="reset" value="Reset Form"></a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </fieldset>
+  </div>
+  <div id="alternative_contact_details">
+    <hr>
+    <h2>Alternative Contact Details</h2>
+    <h3>John Mulhall - Site Developer</h3>
+    <h4>Cell/Mobile Phone Number: +353 (0)86 2317352</h4>
+    <h4>Email: johnmlhll@yahoo.com</h4>
+    <h4>Twitter: <a class="people_links" target="_blank" href="https://twitter.com/johnmlhll?lang=en"> @johnmlhll</a></h4>
+    <h4>LinkedIn: <a class="people_links" target="_blank" href="https://www.linkedin.com/in/johnmlhll/">John on LinkedIn</a></h4>
+  </div>
+</div>
+<!--Template for form information-->
+<ng-template #forminfo>
+  <div class="form-container">
+    <div class="rows">
+      <h3>Many Thanks - Messsage is Sent - Details Are:</h3>
+      <h4>Contact Type: <span class="contact-vars">{{ contactName }}</span></h4>
+      <h4>First Name: <span class="contact-vars">{{ firstName }}</span></h4>
+      <h4>Last Name: <span class="contact-vars">{{ lastName }}</span></h4>
+      <h4>Email Address: <span class="contact-vars">{{ email }}</span></h4>
+      <h4>Contact Number: <span class="contact-vars">{{ contactNumber }}</span></h4>
+      <p>Comment: <br>{{ comment }}</p>
+    </div>
+    <input class="back_button" name="btnBack" type="button" value="Back to Contact Form" onclick="location.reload()" >
+  </div>
+</ng-template>
