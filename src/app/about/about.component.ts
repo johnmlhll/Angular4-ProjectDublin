@@ -26,8 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export class AboutComponent implements OnInit {
 
   //declare variables
-  imgSpringBoardAccept = "/assets/images/imgSpringbaordAcceptance.jpg";
-  imgJohnInsideDBS = "/assets/images/imgJohnInsideDBS.jpg";
+  imgSpringBoardAccept = "assets/images/imgSpringbaordAcceptance.jpg";
+  imgJohnInsideDBS = "assets/images/imgJohnInsideDBS.jpg";
   state:string = 'small';
 
   constructor() { }
